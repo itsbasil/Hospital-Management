@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61e7ae04-e4c5-45b9-b5c2-6dde79fd5361" name="Changes" comment="" />
+    <list default="true" id="61e7ae04-e4c5-45b9-b5c2-6dde79fd5361" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/myenv/myproject/myapp/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/myenv/myproject/myapp/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myenv/myproject/myapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/myenv/myproject/myapp/templates/home.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2du5cBCDQZuWg5dsO81DXVYrNRm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -19,7 +25,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
   }
 }]]></component>
   <component name="SharedIndexes">
