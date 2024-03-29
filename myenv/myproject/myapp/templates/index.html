@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <style>
+    
+    
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+
+      
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: rgb(11, 11, 30);
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgb(11, 11, 30);
+      min-width: 160px;
+  
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color: rgb(255, 255, 255);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+      background-color:rgba(255, 255, 255, 0.119);
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    </style>
+
+
+
+
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>lifeline</title>
+  <meta name="title" content="Doclab - home">
+  <meta name="description" content="Hospital management system project">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./static/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./static/images/hero-banner.png">
+  <link rel="preload" as="image" href="./static/images/hero-bg.png">
+  
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./static/images/logo.png" width="136" height="46" alt="lifeline">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="#" class="logo">
+            <img src="./static/images/logo.svg" width="136" height="46" alt="lifeline">
+          </a>
+
+          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#services2" class="navbar-link title-md">Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Doctors</a>
+          </li>
+          
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Contact</a>
+          </li>
+
+           <li class="navbar-item">
+            <a href="#aboutus" class="navbar-link title-md">AboutUs</a>
+           </li>
+
+           <li class="navbar-item">
+            <div class="dropdown">
+              <button class="dropbtn">Settings 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Login</a>
+                <a href="#">Register</a>
+              </div>
+            </div> 
+          </li>
+
+        </ul>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="#" class="btn has-before title-md">Make Appointment</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #BANNER
+      -->
+
+      <section class="section hero" style="background-image: url('./static/images/hero-bg.png')" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle has-before" data-reveal="left">Welcome To Life Line</p>
+
+            <h1 class="headline-lg hero-title" data-reveal="left">The <bold style="color:rgb(11, 11, 30)">best</bold> doctor gives
+              The <bold style="color:rgb(11, 11, 30)">least</bold> medicines<br>
+             
+           </h1>
+
+
+          </div>
+
+          <figure class="hero-banner" data-reveal="right">
+            <img src="./static/images/hero-banner.png" width="590" height="517" loading="eager" alt="hero banner"
+              class="w-100">
+          </figure>
+
+        </div >
+        <div  id="services2"></div>
+      </section>
+      
+
+
+      <!-- 
+        - #SERVICES
+      -->
+
+      <section   class="section listing" aria-labelledby="listing-label">
+        <div class="container">
+
+          <ul class="grid-list">
+
+            <li>
+              <p class="section-subtitle title-lg" id="listing-label" data-reveal="left">Services</p>
+
+              <h2 class="headline-md" data-reveal="left">Browse by specialist</h2>
+            </li>
+
+            <li>
+              <a href="#" class="listing-card" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="./static/images/icon-1.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Psychiatry</h3>
+
+                  <p class="card-text">Porta velit</p>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="listing-card" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="./static/images/icon-2.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Gynecology</h3>
+
+                  <p class="card-text">Mattis augue</p>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="listing-card" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="./static/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Pulmonology</h3>
+
+                  <p class="card-text">Mauris laoreet</p>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="listing-card" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="./static/images/icon-5.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Orthopedics</h3>
+
+                  <p class="card-text">Convallis vulputate</p>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="listing-card" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="./static/images/icon-6.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Pediatrics</h3>
+
+                  <p class="card-text">Posuere maecenas</p>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+      
+              <a href="#" class="listing-card" data-reveal="bottom">
+
+                <div class="card-icon">
+                  <img src="./static/images/icon-7.png" width="71" height="71" loading="lazy" alt="icon">
+                </div>
+
+                <div>
+                  <h3 class="headline-sm card-title">Osteology</h3>
+
+                  <p class="card-text">Nisi nullam</p>
+                
+                </div>
+             </a>
+          
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section id="aboutus" class="section about" aria-labelledby="about-label">
+        <div class="container">
+
+          <div class="about-content">
+
+            <p class="section-subtitle title-lg has-after" id="about-label" data-reveal="left">About Us</p>
+
+            <h2 class="headline-md" data-reveal="left">Experienced Workers</h2>
+
+            <p class="section-text" data-reveal="left">
+              We are dedicated to revolutionizing the healthcare industry by providing cutting-edge solutions to streamline hospital operations and enhance patient care.
+            </p>
+
+            <p class="tab-text" data-reveal="left">
+              Life Line Hospital is a team of passionate individuals, including experienced healthcare professionals and talented software engineers,
+               united by a common goal: to create a seamless healthcare experience for both medical staff and patients.
+            </p>
+
+            <h3 data-reveal="left">What We Offer</h3><br>
+            <h4 data-reveal="left">Comprehensive Hospital Management:</h4>
+            <p class="tab-text" data-reveal="left">
+               Our software offers a comprehensive suite of features to manage all aspects of hospital operations, including patient registration, 
+              appointment scheduling, electronic medical records (EMR), billing, and inventory management.
+            </p>
+
+            <h4 data-reveal="left">User-Friendly Interface:</h4> 
+            <p class="tab-text" data-reveal="left">
+              We understand the importance of user experience in healthcare settings. Our intuitive interface is designed to be user-friendly, allowing healthcare professionals to easily navigate the system and focus on providing quality care to patients.
+            </p>
+
+           <div>
+             <h4 data-reveal="left">24/7 Support:</h4>
+            <p class="tab-text" data-reveal="left">
+               At Life Line Hospital Management System, we prioritize customer satisfaction. Our dedicated support team is available 24/7 to assist you with any inquiries or technical issues you may encounter.
+            </p>
+          </div>
+
+
+          </div>
+
+          <figure class="about-banner" data-reveal="right">
+            <img src="./static/images/about-banner.png" width="554" height="678" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('./static/images/footer-bg.png')">
+    <div class="container">
+
+      <div class="section footer-top">
+
+        <div class="footer-brand" data-reveal="bottom">
+
+          <a href="#" class="logo">
+            <img src="./static/images/logo.png" width="136" height="46" loading="lazy" alt="Doclab home">
+          </a>
+
+          <ul class="contact-list has-after">
+
+            <li class="contact-item">
+
+              <div class="item-icon">
+                <ion-icon name="mail-open-outline"></ion-icon>
+              </div>
+
+              <div>
+                <p>
+                  Main Email : <a href="mailto:contact@website.com" class="contact-link">contact@&shy;website.com</a>
+                </p>
+
+                <p>
+                  Inquiries : <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a>
+                </p>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="item-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <div>
+                <p>
+                  Office Telephone : <a href="tel:0029129102320" class="contact-link">0029129102320</a>
+                </p>
+
+                <p>
+                  Mobile : <a href="tel:000232439493" class="contact-link">000 2324 39493</a>
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./static/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
