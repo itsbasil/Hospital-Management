@@ -1,0 +1,217 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+    /**
+     * colors
+     */
+  
+    --rich-black-fogra-29: hsl(222, 44%, 8%);
+    --middle-blue-green_40: hsla(174, 64%, 71%, 0.4);
+    --midnight-green: hsl(186, 100%, 19%);
+    --midnight-green_a25: hsla(186, 100%, 19%, 0.25);
+    --independece: hsl(236, 14%, 39%);
+    --verdigris: hsl(182, 100%, 35%);
+    --ming: hsl(186, 72%, 24%);
+    --space-cadet: hsla(226, 45%, 24%);
+    --eerie-black: hsl(0, 0%, 13%);
+    --alice-blue: hsl(187, 25%, 94%);
+    --gray-web: hsl(0, 0%, 50%);
+    --gainsboro: hsl(0, 0%, 87%);
+    --white: hsl(0, 0%, 100%);
+    --white_a20: hsla(0, 0%, 100%, 0.2);
+    --white_a10: hsla(0, 0%, 100%, 0.1);
+    --black: hsl(0, 0%, 0%);
+  
+    /**
+     * typography
+     */
+  
+    --ff-oswald: 'Oswald', sans-serif;
+    --ff-rubik: 'Rubik', sans-serif;
+    
+    --headline-lg: 5rem;
+    --headline-md: 3rem;
+    --headline-sm: 2rem;
+    --title-lg: 1.8rem;
+    --title-md: 1.5rem;
+    --title-sm: 1.4rem;
+    
+    --fw-500: 500;
+    --fw-700: 700;
+  
+    /**
+     * spacing
+     */
+  
+    --section-padding: 120px;
+  
+    /**
+     * box shadow
+     */
+  
+    --shadow-1: 0px 2px 20px hsla(209, 36%, 72%, 0.2);
+    --shadow-2: 0 4px 16px hsla(0, 0%, 0%, 0.06);
+  
+    /**
+     * border radius
+     */
+  
+    --radius-circle: 50%;
+    --radius-12: 12px;
+    --radius-6: 6px;
+    --radius-4: 4px;
+  
+    /**
+     * transition
+     */
+  
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    --transition-3: 1s ease;
+    --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+    --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+  
+  }
+  
+  
+  
+  
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  var(--midnight-green);
+  }
+  .wrapper{
+    position: relative;
+    max-width: 430px;
+    width: 180%;
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  .wrapper h2{
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+  }
+  .wrapper h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: var(--midnight-green);
+  }
+  .wrapper h3{
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .wrapper form{
+    margin-top: 30px;
+  }
+  .wrapper :where( form .input-box,.select-box){
+    height: 52px;
+    margin: 18px 0;
+  }
+  form :where(.input-box input, .select-box){
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .wrapper form .input-box2{
+    height: 52px;
+    margin: 18px 0;
+  }
+  
+  form .input-box2 input{
+    height: 100%;
+    width: 178px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  .select-box select{
+    height:100%;
+    width:100%;
+    outline:none;
+    border:none;
+    color: #707070;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  
+  .input-box input:focus,
+  .input-box input:valid{
+    border-color: var(--midnight-green);
+  }
+  form .policy{
+    display: flex;
+    align-items: center;
+  }
+  form h3{
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  .input-box.button input{
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: var(--midnight-green);
+    cursor: pointer;
+  }
+  .input-box.button input:hover{
+    background:  var(--midnight-green);
+  }
+  form .text h3{
+   color: #333;
+   width: 100%;
+   text-align: center;
+  }
+  form .text h3 a{
+    color: var(--midnight-green);
+    text-decoration: none;
+  }
+  form .text h3 a:hover{
+    text-decoration: underline;
+  }
+  .reglogo{
+      
+    text-align-last: center;
+    margin-bottom: 10px;
+  }

@@ -22,4 +22,5 @@ urlpatterns = [
      path('',views.index,name='index'),
      path('patientReg',views.patientReg,name='patientReg'),
      path('patientLog',views.patientLog,name='patientLog'),
+     path('appointment',views.appointment,name='appointment'),
 ]

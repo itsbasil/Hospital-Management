@@ -9,3 +9,5 @@ def patientReg(request):
     return render (request, 'patientReg.html')
 def patientLog(request):
     return render (request, 'patientLog.html')
+def appointment(request):
+    return render (request, 'appointment.html')
