@@ -21,6 +21,7 @@ from . import views
 urlpatterns = [
      path('',views.index,name='index'),
      path('patientReg',views.patientReg,name='patientReg'),
+     path('doctorReg',views.doctorReg,name='doctorReg'),
      path('patientLog',views.patientLog,name='patientLog'),
      path('appointment',views.appointment,name='appointment'),
 ]
