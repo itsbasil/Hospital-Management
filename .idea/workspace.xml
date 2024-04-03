@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="61e7ae04-e4c5-45b9-b5c2-6dde79fd5361" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/myenv/myproject/myapp/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/myenv/myproject/myapp/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myenv/myproject/myapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/myenv/myproject/myapp/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +28,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/T U F/OneDrive/Desktop/test/hospital project test folder/hospital"
   }
 }]]></component>
   <component name="SharedIndexes">

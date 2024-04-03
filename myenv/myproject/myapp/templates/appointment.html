@@ -14,18 +14,20 @@
     </a></div>
   <div class="wrapper">
     <h2>Book Appointment</h2>
-    <form action="#">
+    <form action="#" method="post">
+        {% csrf_token %}
       <div class="input-box">
-        <input type="text" placeholder="Enter your name" required>
+        <input type="text" id="patientname" name="patientname" placeholder="Enter your name" required>
       </div>
       <div class="input-box">
-        <input type="email" placeholder="Enter your email" required>
+        <input type="text" id="age" name="age" placeholder="Enter your age" required>
       </div>
       <div class="input-box">
-        <input type="number" placeholder="Enter Mobile Number" required>
+        <input type="text" id="contactnum" name="contactnum" placeholder="Enter Mobile Number" required>
       </div>
 
       <div class="input-box">
+        <input type="text" id="doctorname" name="doctorname" placeholder="Enter Doctor Name" required>
         <div class="column">
             <div class="select-box">
          <select>
@@ -41,19 +43,19 @@
 
       <div class="input-box">
       
-        <input type="text" name="date" placeholder="Appointment Date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+        <input type="text" id="date" name="date" placeholder="Appointment Date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
       </div>
       
     
       <h3>Address:</h3>
 
       <div class="input-box2">
-        <input type="text" placeholder="Enter Area" required>
-        <input type="text" placeholder="Enter City" required>
+        <input type="text" id="address1" name="address1" placeholder="Enter Area" required>
+        <input type="text" id="address2" name="address2" placeholder="Enter City" required>
       </div>
       <div class="input-box2">
-        <input type="text" placeholder="Enter State" required>
-        <input type="number" placeholder="Postal Code" required>
+        <input type="text" id="address3" name="address3" placeholder="Enter State" required>
+        <input type="text" id="pin" name="pin" placeholder="Postal Code" required>
       </div>
       
       <div class="input-box button">

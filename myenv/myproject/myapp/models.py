@@ -30,3 +30,17 @@ class Doctor(models.Model):
     def __str__(self):
         return self.doctorname
     
+    #appointment 
+class Appointment(models.Model):
+    patientname=models.CharField(max_length=150)
+    age=models.CharField(max_length=100)
+    contactnum=models.CharField(max_length=100)
+    doctorname=models.CharField(max_length=150,null=True,blank=True)
+    date=models.CharField(max_length=150)
+    address1=models.CharField(max_length=150)
+    address2=models.CharField(max_length=150)
+    address3=models.CharField(max_length=150)
+    pin=models.CharField(max_length=150)
+
+    def __str__(self):
+        return self.patientname    

@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User,auth
 from django.shortcuts import render,redirect
-from.forms import PatientForm,DoctorForm
-from.models import Patient,Doctor
+from.forms import PatientForm,DoctorForm,AppointmentForm
+from.models import Patient,Doctor,Appointment
 from django.http import HttpResponse
 
 # Create your views here.
@@ -46,6 +46,13 @@ def doctorReg(request):
 def patientLog(request):
     return render(request,'patientLog.html')
 
-#appointment
+#patient appointment
 def appointment(request):
-    return render(request,'appointment.html')
+    if request.method=="POST":
+            form=AppointmentForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return render(request,'index.html')
+    else:
+        form=AppointmentForm()
+        return render(request,'appointment.html')
