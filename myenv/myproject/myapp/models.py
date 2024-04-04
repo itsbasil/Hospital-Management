@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-   #patient Registration
+    #patient Registration
 class Patient(models.Model):
     pname=models.CharField(max_length=150)
     dob=models.CharField(max_length=150)
@@ -15,20 +15,6 @@ class Patient(models.Model):
     password1=models.CharField(max_length=150)
     def __str__(self):
         return self.pname
-    
-     #doctor Registration
-class Doctor(models.Model):
-    doctorname=models.CharField(max_length=150)
-    dob=models.CharField(max_length=150)
-    address=models.CharField(max_length=150)
-    username=models.CharField(max_length=150)
-    contactnum=models.CharField(max_length=100)
-    age=models.CharField(max_length=100)
-    gender=models.CharField(max_length=100)
-    password=models.CharField(max_length=150)
-    password1=models.CharField(max_length=150)
-    def __str__(self):
-        return self.doctorname
     
     #appointment 
 class Appointment(models.Model):
@@ -43,4 +29,27 @@ class Appointment(models.Model):
     pin=models.CharField(max_length=150)
 
     def __str__(self):
-        return self.patientname    
+        return self.patientname
+    
+    #doctor and patient login
+class Login(models.Model):
+      username=models.CharField(max_length=150)
+      password=models.CharField(max_length=150)
+      def __str__(self):
+        return self.username
+    
+    #doctor Registration
+class Doctor(models.Model):
+    doctorname=models.CharField(max_length=150)
+    dob=models.CharField(max_length=150)
+    address=models.CharField(max_length=150)
+    username=models.CharField(max_length=150)
+    contactnum=models.CharField(max_length=100)
+    age=models.CharField(max_length=100)
+    gender=models.CharField(max_length=100)
+    password=models.CharField(max_length=150)
+    password1=models.CharField(max_length=150)
+    def __str__(self):
+        return self.doctorname
+    
+

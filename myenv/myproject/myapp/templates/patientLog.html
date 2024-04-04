@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIFE LINE HOSPITAL</title> 
+    <title> Lifeline </title> 
     <link rel="stylesheet" href="static/css/patientLog.css">
    </head>
 <body>
@@ -16,12 +16,15 @@
     
    
     <h2>Login</h2>
-    <form action="#"> 
+    <form action="#" method="post"> 
+
+      {% csrf_token %}
+
       <div class="input-box">
-        <input type="text" placeholder="Enter your name" required>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Password" required>
+        <input type="text" id="password" name="password" placeholder="Password" required>
       </div>
       
       <div class="input-box button">

@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User,auth
 from django.shortcuts import render,redirect
-from.forms import PatientForm,DoctorForm,AppointmentForm
-from.models import Patient,Doctor,Appointment
+from.forms import PatientForm,AppointmentForm,DoctorForm
+from.models import Patient,Appointment,Login,Doctor
 from django.http import HttpResponse
 
 # Create your views here.
@@ -11,7 +11,7 @@ def index(request):
 #patient Registration
 def patientReg(request):
     if request.method == "POST":
-        username=request.POST['username']
+        username=request.POST['pname']
         password = request.POST['password']
         password1 = request.POST['password1']
         if password == password1:
@@ -24,11 +24,11 @@ def patientReg(request):
         return redirect('/')
     else:
         return render(request,'patientReg.html')
-    
-    #doctor Registration
+
+#doctor Registration
 def doctorReg(request):
     if request.method == "POST":
-        username=request.POST['username']
+        username=request.POST['doctorname']
         password = request.POST['password']
         password1 = request.POST['password1']
         if password == password1:
@@ -42,9 +42,45 @@ def doctorReg(request):
     else:
         return render(request,'doctorReg.html')
 
-#patient Login
+#doctor page
+def doctor(request):
+    return render(request,'doctor.html')
+
+
+
+#patient and doctor login
 def patientLog(request):
-    return render(request,'patientLog.html')
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        try:
+            user=Patient.objects.get(username=username,password=password)
+            if user is not None:
+                print(user)
+                return render(request,'UserModule.html')
+            return render(request, 'patientLog.html')
+        except:
+             pass
+        try:
+           user=Login.objects.get(username=username,password=password)
+           if user is not None:
+               print(user)
+               return render(request, 'index.html')
+           #return render(request,'Adminmodule.html')
+        except:
+            pass
+
+        try:
+            user=Doctor.objects.get(username=username,password=password)
+            if user is not None:
+                print(user)
+                return render(request,'DoctorModule.html')
+            return render(request,'patientLog.html')
+        except:
+             pass
+    else:
+        return render(request,'patientLog.html')
+
 
 #patient appointment
 def appointment(request):
