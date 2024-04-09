@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <style>
+    
+    
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+
+      
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: rgb(11, 11, 30);
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgb(11, 11, 30);
+      min-width: 160px;
+  
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color: rgb(255, 255, 255);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+      background-color:rgba(255, 255, 255, 0.119);
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+
+/*   doctor  */
+
+
+body{
+      
+    margin:0;
+    font-family:sans-serif;
+    background:#f2f2f2f2;
+}
+h3{
+    text-align:center;
+    font-size:18px;
+    margin:0;
+    padding-top:10px;
+  }
+a{
+    text-decoration:none;
+}
+.container{
+
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+    justify-content: center;
+    align-items:center;
+    margin:50px 0;
+}
+.content{
+    width:20%;
+    margin:15px;
+    box-sizing:border-box;
+    float:left;
+    text-align:center;
+    border-radius:3px;
+    cursor:pointer;
+    padding-top:10px;
+    box-shadow:0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    transition:.4s;
+    background: #f2f2f2;
+}
+.content:hover{
+ box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+ 0 3px 6px rgba(0,0,0,0.23);
+ transition: translate(0px, -8px);
+}
+img{
+    width:200px;
+    height:200px;
+    text-align:center;
+    margin:0 auto;
+    display:block;
+}
+p{
+    text-align:center;
+    color:#b2bec3;
+    padding-top: 0 8px;
+}
+h6{
+ font-size:26px;
+ text-align:center;
+ color:#222f3e;
+ margin:0;
+}
+.hero .container {
+      display: 4 grid;
+    }
+button{
+    text-align:center;
+    font-size:24px;
+    color:#fff;
+    width:100%;
+    padding:15px;
+    border:0;
+    outline:none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius:2px;
+    border-bottom-left-radius:2px;
+}
+.makeappointment{
+    background: hsl(222, 44%, 8%);
+}
+h1{
+    color:#fff;
+    padding-left:239px;
+}
+
+
+    </style>
+
+
+
+
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>lifeline</title>
+  <meta name="title" content="Doclab - home">
+  <meta name="description" content="Hospital management system project">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./static/css/common.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./static/images/hero-banner.png">
+  <link rel="preload" as="image" href="./static/images/hero-bg.png">
+  
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./static/images/logo.png" width="136" height="46" alt="lifeline">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="#" class="logo">
+            <img src="./static/images/logo.svg" width="136" height="46" alt="lifeline">
+          </a>
+
+          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#services2" class="navbar-link title-md">Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Doctors</a>
+          </li>
+          
+          <li class="navbar-item">
+            <a href="#" class="navbar-link title-md">Contact</a>
+          </li>
+
+           <li class="navbar-item">
+            <a href="#aboutus" class="navbar-link title-md">AboutUs</a>
+           </li>
+
+           <li class="navbar-item">
+            <div class="dropdown">
+              <button class="dropbtn">Settings 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="patientLog">Login</a>
+                <a href="patientReg">PatRegister</a>
+                <a href="doctorReg">DocRegister</a>
+              </div>
+            </div> 
+          </li>
+
+        </ul>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="appointment" class="btn has-before title-md">Make Appointment</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #BANNER
+      -->
+
+      <section class="section hero" style="background-color: var(--midnight-green);" aria-label="home">
+        <h1>Doctors</h1>
+        <div class="container">
+         <div class="content">         
+            <img src="https://a11c31ef.flyingcdn.com/wp-content/uploads/2022/11/50.jpg" alt="image">
+          
+            <h3>Dr. Vivek Vij</h3>
+            <p>top rated treatement specialist on pediatric</p>
+            <a href="appointment"> <button  class="makeappointment">Make Appointment</button></a>
+        </div>
+        <div class="content">         
+            <img src="https://www.docindia.org/Images/Doc_Public_Prof_img/9f7944bb-6f3f-48ba-86a2-22fc7f0bc5bdfile.png" alt="image">
+            <h3>Dr. Renu Sehgal
+            </h3>
+            <p>top rated treatement specialist on pediatric</p>
+            <a href="appointment"> <button  class="makeappointment">Make Appointment</button></a>
+        </div>
+        <div class="content">         
+            <img src="https://doctoryouneed.org/wp-content/uploads/2020/04/1565255072profile-300x300.jpg" alt="image">
+            <h3>Dr. Subash Gupta
+            </h3>
+            <p>top rated treatement specialist on pediatric</p>
+            <a href="appointment"> <button  class="makeappointment">Make Appointment</button></a>
+        </div>
+        <div class="content">         
+            <img src="https://mgmhospitalvashi.net/storage/2023/07/dp-Dr-Anupam-T.jpg" alt="image">
+            <h3>Dr. Ramdip Ray</h3>
+            <p>top rated treatement specialist on pediatric</p>
+            <a href="appointment"> <button  class="makeappointment">Make Appointment</button></a>
+        </div>
+
+
+          </div>
+        </div >
+        <div  id="services2"></div>
+      </section>
+      
+
+
+        </div>
+      </section>
+
+
+
+
+    
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-color:var(--rich-black-fogra-29)">
+    <div class="container">
+
+      <div class="section footer-top">
+
+        <div class="footer-brand" data-reveal="bottom">
+
+          <a href="#" class="logo">
+            <img src="./static/images/logo.png" width="136" height="46" loading="lazy" alt="Doclab home">
+          </a>
+
+          <ul class="contact-list has-after">
+
+            <li class="contact-item">
+
+              <div class="item-icon">
+                <ion-icon name="mail-open-outline"></ion-icon>
+              </div>
+
+              <div>
+                <p>
+                  Main Email : <a href="mailto:contact@website.com" class="contact-link">contact@&shy;website.com</a>
+                </p>
+
+                <p>
+                  Inquiries : <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a>
+                </p>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="item-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <div>
+                <p>
+                  Office Telephone : <a href="tel:0029129102320" class="contact-link">0029129102320</a>
+                </p>
+
+                <p>
+                  Mobile : <a href="tel:000232439493" class="contact-link">000 2324 39493</a>
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./static/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
