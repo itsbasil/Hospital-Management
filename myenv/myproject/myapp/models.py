@@ -53,3 +53,11 @@ class Doctor(models.Model):
         return self.doctorname
     
 
+   #contact 
+class Contact(models.Model):
+    patientname=models.CharField(max_length=150)
+    number=models.CharField(max_length=100)
+    description=models.CharField(max_length=150)
+    
+    def __str__(self):
+        return self.patientname
