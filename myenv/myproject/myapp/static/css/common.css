@@ -113,12 +113,12 @@
   input,
   button {
     background: none;
-    border: none;
+    /*border: none;*/
     font: inherit;
   }
   
   input {
-    width: 100%;
+    width: 125%;
     outline: none;
   }
   
@@ -920,7 +920,7 @@
      * HEADER
      */
   
-    .header { padding-block: 24px; }
+    .header { padding-block: 0px; }
   
     .nav-open-btn,
     .overlay,

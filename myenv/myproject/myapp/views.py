@@ -46,6 +46,9 @@ def doctorReg(request):
 def doctor(request):
     return render(request,'doctor.html')
 
+#contact page
+def contact(request):
+    return render(request,'contact.html')
 
 
 #patient and doctor login
